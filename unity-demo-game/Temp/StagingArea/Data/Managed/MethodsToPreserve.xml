@@ -1,0 +1,33 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="EventHandler">
+			<method name="FetchLatestBalance"/>
+			<method name="GoToWalletSelect"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="HandleClickNetworkName"/>
+			<method name="PerformAptosTx"/>
+			<method name="PerformEthereumTx"/>
+			<method name="PerformFlowQuery"/>
+			<method name="PerformSuiTx"/>
+			<method name="SelectWallet"/>
+			<method name="SelectWallet"/>
+			<method name="SelectWallet"/>
+			<method name="SelectWallet"/>
+			<method name="SignMessage"/>
+			<method name="ToggleDisplayMenu"/>
+			<method name="ToggleDisplayMenu"/>
+			<method name="ToggleDisplayMenu"/>
+			<method name="ToggleSelectNetwork"/>
+		</type>
+		<type fullname="GameUIManager">
+			<method name="GoToScreen"/>
+			<method name="GoToScreen"/>
+		</type>
+	</assembly>
+</linker>
