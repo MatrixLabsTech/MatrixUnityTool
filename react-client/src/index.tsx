@@ -13,11 +13,5 @@ const root = ReactDOM.createRoot(
 );
 
 window.addEventListener('load', () => {
-  root.render(
-    <>
-      {/* <EthosConnectProvider> */}
-      <App />
-      {/* </EthosConnectProvider> */}
-    </>
-  );
+  root.render(<App />);
 });
