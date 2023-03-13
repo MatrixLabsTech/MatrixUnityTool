@@ -1,4 +1,4 @@
-import { MatrixUnityPlayer } from './unity';
+import { MatrixUnityPlayer } from './Unity';
 
 export default function App() {
   return <MatrixUnityPlayer />;
