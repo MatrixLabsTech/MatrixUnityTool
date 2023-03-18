@@ -10,18 +10,20 @@
 
 ![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/multichaintoolkit.png?raw=true)
 
+## User Guide (Work in Progress)
+
+![Link to Google Docs](https://docs.google.com/document/d/1Wo0OT6tPh25yekr_AqHw6vRr5a6Jg57RWoautkzapMw/edit?usp=sharing)
 
 ## Demo Video
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=QHrcnESh7zc">
-     <img 
-      src="https://img.youtube.com/vi/QHrcnESh7zc/0.jpg" 
-      alt="Demo Video" 
+     <img
+      src="https://img.youtube.com/vi/QHrcnESh7zc/0.jpg"
+      alt="Demo Video"
       style="width:100%;">
       </a>
     </div>
-
 
 ## Design Doc
 
