@@ -12,7 +12,7 @@
 
 ## User Guide (Work in Progress)
 
-![Link to Google Docs](https://docs.google.com/document/d/1Wo0OT6tPh25yekr_AqHw6vRr5a6Jg57RWoautkzapMw/edit?usp=sharing)
+https://docs.google.com/document/d/1Wo0OT6tPh25yekr_AqHw6vRr5a6Jg57RWoautkzapMw/edit?usp=sharing
 
 ## Demo Video
 
