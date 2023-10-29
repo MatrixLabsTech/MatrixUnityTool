@@ -131,9 +131,6 @@ Since this project is in active development, we are making major breaking change
       </a>
     </div>
 
-## Design Doc
-
-**Introduction**
 
 ## Overview
  Matrix Unity Tool is a multichain Web3 toolkit which helps integrate Web3 to Unity WebGL based games. It provides a easy-to-use set of APIs inside unity for game developers to design their multichain games.
@@ -203,108 +200,6 @@ Others - https://react-unity-webgl.dev/
 ## High-Level Communication Flow
 
 ![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/MatrixLabs-Working-High-Level.png?raw=true)
-
-## Definitions
-
-## Blockchain
-
-```
-Name | Status | Features
-ETHEREUM - Active - Connect Metamask wallet, Connect to
-different networks, Fetch balance
-FLOW - Active - Connect Blocto wallet, Connect to different
-networks, Fetch balance, flow queries
-APTOS - Active - Connect Petra wallet, Connect to different
-networks, Fetch balance
-SUI - In-Development -
-```
-
-## BlockchainNetwork
-
-```
-Name | Description
-ETHEREUM_TESTNET - Ethereum testnet
-ETHEREUM_MAINNET - Ethereum mainnet
-POLYGON_MAINNET - Polygon mainnet
-FLOW_DEVNET - Flow devnet
-FLOW_MAINNET - Flow mainnet
-APTOS_DEVNET - Aptos devnet
-APTOS_MAINNET - Aptos mainnet
-BSC_MAINNET - Binance Smart Chain Mainnet
-SUI_DEVNET - Sui Devnet
-```
-
-## Wallet
-
-```
-Name | Status
-METAMASK - Active
-BLOCTO - Active
-PETRA - Active
-SUI_WALLET - Not-Active
-```
-
-## Web3WalletConnectRequest
-
-```
-Key | Type | Description
-walletName - string - Wallet name
-blockchain - string - Refer: #Blockchain
-network - string - Refer: #BlockchainNetwork
-```
-
-## FlowArg
-
-```
-Key | Type | Description
-val - string - Value as defined by https://developers.flow.com/tools/fcl-js/reference/api#argumentfunction
-type - string - Refer: https://developers.flow.com/tools/fcl-js/reference/api#argumentfunction
-```
-
-## Web3FlowQueryRequest
-
-```
-Key | Type | Description
-cadenceScript - string Cadence script string args List<FlowArg> Argos (optional) as required by the cadence script
-```
-
-## Web3EthereumTxRequest
-
-```
-Key Type Description
-rawTransaction - string - JSON of the raw transaction, note: convert any function to absolute values
-```
-
-## Web3WalletBalRequest
-
-```
-Key | Type | Description
-address - string - Requests wallet balance for any of the #Blockchain for the provided address
-```
-
-## Web3WalletConnectResponse
-
-```
-Key | Type | Description
-invocationId - string - UUID of the request
-bal - float - Wallet balance as float type
-```
-
-## Web3TransactionResponse
-
-```
-Key | Type | Description
-invocationId - string - UUID of the request
-txData - string - JSON response which can be parsed as required
-```
-
-## Web3Error
-
-```
-Key | Type | Description
-invocationId - string - UUID of the request
-message - string - Error message string
-```
 
 ## References
 
