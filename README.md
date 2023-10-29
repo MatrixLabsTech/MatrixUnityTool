@@ -1,4 +1,4 @@
-# MatrixUnityToolkit (MUT)
+# Matrix Unity Toolkit (MUT)
 <div style="display:flex">
 <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" />
 
@@ -10,7 +10,7 @@
 </div>
 </br>
 
-**_NOTE:_**  MatrixUnityToolkit recently got updated to V2 with additional support of Algorand and suppporting wallets. If you were working with V1, please make sure you have checked latest API updates
+**_NOTE:_**  Matrix Unity Toolkit recently got updated to V2 with additional support of Algorand and suppporting wallets. If you were working with V1, please make sure you have checked latest API updates
 
 ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/banner.png)
 
