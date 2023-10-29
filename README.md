@@ -88,6 +88,37 @@ Send transaction can be done using the following:
 ```
 Here, we can pass any optional metadata, onSuccess, onError functions, enable timeout, set timeout duration
 
+## Supported blockchains
+
+| Blockchain Name         | Supported     |
+|--------------|-----------|
+| Ethereum | :heavy_check_mark:      |
+| Flow      | :heavy_check_mark:   |
+| Aptos      | :heavy_check_mark:   |
+| Sui      | :heavy_check_mark:   |
+| Algorand      | :heavy_check_mark:   |
+
+
+## Supported wallets
+
+| Wallet Name         | Supported     |
+|--------------|-----------|
+| Metamask | :heavy_check_mark:      |
+| Pera Wallet      | :heavy_check_mark:   |
+| Petra Wallet      | :heavy_check_mark:   |
+| Sui Wallet      | :heavy_check_mark:   |
+| Blocto      | :heavy_check_mark:   |
+
+## Contributing
+<p>
+Since this project is in active development, we are making major breaking changes to both C# & Unity packages.
+</p>
+
+- **Adding new chains**: Add new enum, setup the chain ID for the new chain, and add support for new wallets if necessary.
+- **Adding support for new wallets**: Go to src/wallets and create a new class for the wallet inheriting the Wallet.ts. Functionalities not implemented would throw an error in the Unity client. Make sure to update the WalletFactory and enums in both c# and TS code.
+- **Adding new APIs**: Start by updating C# code, by introducing new MethodName enum keys, design a request and response body and then reciprocate this action in TS.
+
+
 
 ## Demo Video (Outdated)
 
