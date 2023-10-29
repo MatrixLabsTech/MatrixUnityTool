@@ -10,7 +10,7 @@
 </div>
 </br>
 
-**_NOTE:_**  MatrixUnityToolkit recently got updated to V2 with additional support of Algorand and suppporting wallets.
+**_NOTE:_**  MatrixUnityToolkit recently got updated to V2 with additional support of Algorand and suppporting wallets. If you were working with V1, please make sure you have checked latest API updates
 
 ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/banner.png)
 
@@ -80,7 +80,7 @@ Sign transaction can be done using the following:
 ```
 Here, we can pass any optional metadata, onSuccess, onError functions, enable timeout, set timeout duration
 
-##### 3. Send Transaction
+##### 4. Send Transaction
 
 Send transaction can be done using the following:
 ```csharp
