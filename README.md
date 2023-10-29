@@ -1,5 +1,5 @@
-# MultiChain WebGL ToolKit
-
+# MatrixUnityToolkit (MUT)
+<div style="display:flex">
 <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" />
 
 <img src="https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white" />
@@ -7,14 +7,89 @@
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+</div>
+</br>
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/multichaintoolkit.png?raw=true)
+**_NOTE:_**  MatrixUnityToolkit recently got updated to V2 with additional support of Algorand and suppporting wallets.
 
-## User Guide (Work in Progress)
+![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/banner.png)
 
-https://docs.google.com/document/d/1Wo0OT6tPh25yekr_AqHw6vRr5a6Jg57RWoautkzapMw/edit?usp=sharing
+## Usage
 
-## Demo Video
+#### 1. Importing
+
+You should import the `MatrixSDK` namespace into your script.
+
+```csharp
+using MatrixSDK;
+```
+
+#### 2. Initializing the Toolkit
+
+We use a singleton approach, to import the sdk, it is as simple as this:
+
+```csharp
+private MatrixUnityToolkit mw;
+
+void Start() {
+    mw = MatrixUnityToolkit.Instance;
+}
+```
+
+#### 3. Setting Configuration
+
+Matrix Unity Toolkit supports multiple chains and wallets including Algorand, Ethereum, Flow, Aptos & Sui. Follow the example to configure the Web3 wallets and chains for your application:
+```csharp
+mw.SetConfig(new WalletName[] { WalletName.PeraWallet, WalletName.MyAlgoConnect }, Blockchain.Algorand, "4160"); // chainIDs: 416001, 416002, 416003 , 4160
+```
+
+#### 4. Connecting to a Wallet
+
+We provide 2 ways to connect to a wallet. Each method requires you to pass in a callback function (or not) which provides an instance of the wallet after connection is made:
+1. Using the provided UI (similar to WalletConnect)
+```csharp
+mw.Connect(this.WalletConnected);
+```
+2. Manually selecting the wallet
+```csharp
+mw.Connect(WalletName.PeraWallet, this.WalletConnected);
+```
+
+#### 4. Use Web3 Features!
+
+##### 1. Get Balance
+Getting balance of user's account can be done using the following:
+```csharp
+  this.walletInstance.GetBalance("{}", null, null, false);
+```
+Here, we can pass any optional metadata, onSuccess, onError functions, enable timeout, set timeout duration
+
+##### 2. Sign Message
+
+Sign transaction can be done using the following:
+```csharp
+  this.walletInstance.SignMessage("sample message", null, null, false);
+```
+Here, we can pass any message, onSuccess, onError functions, enable timeout, set timeout duration
+
+##### 3. Sign Transaction
+
+Sign transaction can be done using the following:
+```csharp
+  this.walletInstance.SignTransaction("{}", null, null, false);
+```
+Here, we can pass any optional metadata, onSuccess, onError functions, enable timeout, set timeout duration
+
+##### 3. Send Transaction
+
+Send transaction can be done using the following:
+```csharp
+  this.walletInstance.SendTransaction("{}", null, null, false);
+```
+Here, we can pass any optional metadata, onSuccess, onError functions, enable timeout, set timeout duration
+
+
+## Demo Video (Outdated)
 
 <div align="center">
       <a href="https://www.youtube.com/watch?v=QHrcnESh7zc">
@@ -30,26 +105,20 @@ https://docs.google.com/document/d/1Wo0OT6tPh25yekr_AqHw6vRr5a6Jg57RWoautkzapMw/
 **Introduction**
 
 ## Overview
-
-MultiChain Web3 ToolKit for Unity is a set of packages (scripts and UI) created to help game developers integrate Web3 APIs with Unity 3D WebGL Builds.
+ Matrix Unity Tool is a multichain Web3 toolkit which helps integrate Web3 to Unity WebGL based games. It provides a easy-to-use set of APIs inside unity for game developers to design their multichain games.
 
 - Helps integrate WebGL Unity 3D build with Web
-- Provides a framework and a standard UI for integrating Web 3 Auth for wallets such
-  as Ethereum, Flow, Aptos, and Sui
+- Provides a framework and a standard UI for integrating Web 3 Auth for Algorand, Ethereum, Flow, Aptos & Sui.
 - Provides a package for Unity 3D and React
 - Customizable UI, API for easy integration
 - Provides API for signing messages, transactions
 
 ## Product Requirements
 
-1. A game developer should be able to integrate the package provided to add Web
-   support to the non-Web3 game
-2. A game developer should be able to make use of the provided sample UI for
-   integrating Web3 authentication in Unity3D games
-3. A game developer should not be required to modify React code as It should be
-   plug-and-play
-4. A game developer should be able to make use of the provided API for connecting a
-   wallet, carrying out transactions, and fetching wallet balance
+1. A game developer should be able to integrate the package provided to add Web support to the non-Web3 game
+1. A game developer should be able to make use of the provided sample UI for integrating Web3 authentication in Unity3D games
+2. A game developer should not be required to modify React code as It should be plug-and-play
+3. A game developer should be able to make use of the provided API for connecting a wallet, carrying out transactions, and fetching wallet balance
 
 ## Technical Specifications
 
@@ -63,12 +132,10 @@ Others - https://react-unity-webgl.dev/
 
 ## Future Goals
 
-1. **Adding New Wallets** - Add new Classes (parsers) forintegrating more wallets
-2. **Readme** - create easy to follow documentation and a video tutorial series for game developers to use this package.
-3. **Adding more APIs** - Add more APIs for blockchain, such as NFT creation, and coin
-   transfer, making it even easier for the developers
-4. **Auto-generate React App** - We want to create a CLI-based application that
-   auto-generates a React app that can be directly used as the client front-end.
+1. **Supporting New Chains & Wallets** - Add new Classes (parsers) forintegrating more wallets
+2. **Documentation** - create easy to follow documentation and a video tutorial series for game developers to use this package.
+3. **Adding more APIs** - Add more APIs for blockchain, such as NFT creation, and coin transfer, making it even easier for the developers
+4. **Auto-generate React App** - We want to create a CLI-based application that auto-generates a React app that can be directly used as the client front-end.
 
 ## Assumptions
 
@@ -83,54 +150,28 @@ Others - https://react-unity-webgl.dev/
 
 ## UI Flow
 
-1. **Select a Wallet** screen
-   ![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_1.png?raw=true)
+1. **Game Demo**
+   ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/MUT_1.png)
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_2.png?raw=true)
 
-2. **Get Wallet Balance** screen
-   ![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_3.png?raw=true)
+2. **Select Network (part of Game Demo)**
+   ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/MUT_2.png)
 
-3. **Message Signing** screen
+3. **Select a Wallet**
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_4.png?raw=true)
+  ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/MUT_3.png)
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_5.png?raw=true)
+4. **Connection to a web wallet** (eg; Pera Wallet)
 
-4. **Transactions / Smart-Contract Interaction** screen
+  ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/MUT_4.png)
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_6.png?raw=true)
+   ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/MUT_5.png)
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_7.png?raw=true)
 
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/UI_8.png?raw=true)
-
-## APIs
-
-```
-Function Name | Parameters | Description
-SelectWallet - walletName: string - Invokes the JS function which connects the Web wallet
-FetchLatestBalance - void - Invokes the JS function which fetches the balances and returns it back in an async manner
-ErrorListener - jsonStr: string - Takes the object sent via the JS code containing the invocation ID and error message. It displays the error message and clears the invocation.
-PerformFlowQuery - cadenceQuery: string, Args: List<FlowArg> - Invokes the JS function which performs the Flow Query (read) in Flow blockchain
-TransactionResponseListener - jsonStr: string - Shows a success message with transaction data and clears the invocation
-```
 
 ## High-Level Communication Flow
 
 ![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/MatrixLabs-Working-High-Level.png?raw=true)
-
-## State Management
-
-![MultiChain WebGL ToolKit](https://github.com/MatrixLabsTech/MatrixUnityTool/blob/main/Docs/state-management.png?raw=true)
-
-```
-State | Description
-NOT_CONNECTED - Game is not connected to the Web3 wallet
-WALLET_CONNECTING - User initiated connection and it's being carried on. Once connected it will go to the IDLE state or if error, then the ERROR state.
-IDLE - Wallet is connected, and the game is aware of the user
-account address, blockchain name, and network name ERROR For any error such as a wallet connection error, we move to ERROR state.
-```
 
 ## Definitions
 
@@ -241,7 +282,5 @@ message - string - Error message string
 3. https://aptos.dev/guides/aptos-guides
 4. https://github.com/jeffreylanters/react-unity-webgl/issues/
 5. https://github.com/jeffreylanters/react-unity-webgl/discussions/
-6. https://ethereum.stackexchange.com/questions/92095/web3-current-best-practice-to-
-   connect-metamask-to-chrome
-7. https://stackoverflow.com/questions/56663785/invalid-hook-call-hooks-can-only-be-c
-   alled-inside-of-the-body-of-a-function-com
+6. https://ethereum.stackexchange.com/questions/92095/web3-current-best-practice-to-connect-metamask-to-chrome
+1. https://stackoverflow.com/questions/56663785/invalid-hook-call-hooks-can-only-be-called-inside-of-the-body-of-a-function-com
