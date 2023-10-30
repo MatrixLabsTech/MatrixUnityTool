@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
+    <ProjectGuid>{2F9BA9F5-7F29-223D-DEE1-A705588E0664}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,8 +56,17 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/SDK/PeraWallet.cs" />
+    <Compile Include="Assets/SDK/MyAlgoConnect.cs" />
+    <Compile Include="Assets/SDK/MatrixUnityEventDispatcher.cs" />
     <Compile Include="Assets/SelectNetworksController.cs" />
     <Compile Include="Assets/scripts/EventHandler.cs" />
+    <Compile Include="Assets/SDK/MatrixUnityToolkit.cs" />
+    <Compile Include="Assets/MessageManager.cs" />
+    <Compile Include="Assets/GameManager.cs" />
+    <Compile Include="Assets/SDK/BaseWallet.cs" />
+    <Compile Include="Assets/WalletSelectorBtnManager.cs" />
+    <Compile Include="Assets/SDK/WalletManager.cs" />
     <Compile Include="Assets/GameUIManager.cs" />
   </ItemGroup>
   <ItemGroup>
