@@ -36,6 +36,13 @@ namespace MatrixSDK
                             wallets.Add(item, new MyAlgoConnect(item));
                             break;
                         }
+                    case WalletName.Metamask:
+                        {
+                            // your code 
+                            // for MULTIPLY operator
+                            wallets.Add(item, new Metamask(item));
+                            break;
+                        }
                     default: break;
 
                 }

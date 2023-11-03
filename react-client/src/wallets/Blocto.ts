@@ -3,7 +3,7 @@ import { Wallet } from "./Wallet";
 const fcl = require('@blocto/fcl');
 
 
-export class MetamaskWallet extends Wallet {
+export class BloctoWallet extends Wallet {
     walletType = WalletType.Blocto;
 
     constructor(chainType: ChainType, networkType: NetworkTypeKey) {
