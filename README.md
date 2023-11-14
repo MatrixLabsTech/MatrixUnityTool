@@ -1,4 +1,4 @@
-# Matrix Unity Toolkit (MUT)
+# Matrix Unity Tool (MUT)
 <div style="display:flex">
 <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" />
 
@@ -10,7 +10,7 @@
 </div>
 </br>
 
-**_NOTE:_**  Matrix Unity Toolkit recently got updated to V2 with additional support of Algorand and suppporting wallets. If you were working with V1, please make sure you have checked latest API updates
+**_NOTE:_**  Matrix Unity Tool recently got updated to V2 with additional support of Algorand and suppporting wallets. If you were working with V1, please make sure you have checked latest API updates
 
 ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/banner.png)
 
@@ -24,7 +24,7 @@ You should import the `MatrixSDK` namespace into your script.
 using MatrixSDK;
 ```
 
-#### 2. Initializing the Toolkit
+#### 2. Initializing the Tool
 
 We use a singleton approach, to import the sdk, it is as simple as this:
 
@@ -38,7 +38,7 @@ void Start() {
 
 #### 3. Setting Configuration
 
-Matrix Unity Toolkit supports multiple chains and wallets including Algorand, Ethereum, Flow, Aptos & Sui. Follow the example to configure the Web3 wallets and chains for your application:
+Matrix Unity Tool supports multiple chains and wallets including Algorand, Ethereum, Flow, Aptos & Sui. Follow the example to configure the Web3 wallets and chains for your application:
 ```csharp
 mw.SetConfig(new WalletName[] { WalletName.PeraWallet, WalletName.MyAlgoConnect }, Blockchain.Algorand, "4160"); // chainIDs: 416001, 416002, 416003 , 4160
 ```
