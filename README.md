@@ -88,6 +88,17 @@ Send transaction can be done using the following:
 ```
 Here, we can pass any optional metadata, onSuccess, onError functions, enable timeout, set timeout duration
 
+## Demo Video 
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=QerC48fWynI">
+     <img
+      src="https://img.youtube.com/vi/QerC48fWynI/0.jpg"
+      alt="Demo Video"
+      style="width:100%;">
+      </a>
+    </div>
+    
 ## Supported blockchains
 
 | Blockchain Name         | Supported     |
@@ -97,17 +108,6 @@ Here, we can pass any optional metadata, onSuccess, onError functions, enable ti
 | Aptos      | :heavy_check_mark:   |
 | Sui      | :heavy_check_mark:   |
 | Algorand      | :heavy_check_mark:   |
-
-## Demo Video 
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=QHrcnESh7zc">
-     <img
-      src="https://img.youtube.com/vi/QerC48fWynI/0.jpg"
-      alt="Demo Video"
-      style="width:100%;">
-      </a>
-    </div>
 
 ## Supported wallets
 
