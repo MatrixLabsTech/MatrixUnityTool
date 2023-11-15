@@ -10,7 +10,7 @@
 </div>
 </br>
 
-**_NOTE:_**  Matrix Unity Tool recently got updated to V2 with additional support of Algorand and suppporting wallets. If you were working with V1, please make sure you have checked latest API updates
+**_NOTE:_**  Matrix Unity Tool recently got updated to V0.2 with additional support of Algorand and suppporting wallets. If you were working with V0.1, please make sure you have checked latest API updates
 
 ![MultiChain WebGL ToolKit](https://raw.githubusercontent.com/MatrixLabsTech/MatrixUnityTool/main/Docs/v2/banner.png)
 
