@@ -98,6 +98,16 @@ Here, we can pass any optional metadata, onSuccess, onError functions, enable ti
 | Sui      | :heavy_check_mark:   |
 | Algorand      | :heavy_check_mark:   |
 
+## Demo Video 
+
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=QHrcnESh7zc">
+     <img
+      src="https://img.youtube.com/vi/QerC48fWynI/0.jpg"
+      alt="Demo Video"
+      style="width:100%;">
+      </a>
+    </div>
 
 ## Supported wallets
 
@@ -117,20 +127,6 @@ Since this project is in active development, we are making major breaking change
 - **Adding new chains**: Add new enum, setup the chain ID for the new chain, and add support for new wallets if necessary.
 - **Adding support for new wallets**: Go to src/wallets and create a new class for the wallet inheriting the Wallet.ts. Functionalities not implemented would throw an error in the Unity client. Make sure to update the WalletFactory and enums in both c# and TS code.
 - **Adding new APIs**: Start by updating C# code, by introducing new MethodName enum keys, design a request and response body and then reciprocate this action in TS.
-
-
-
-## Demo Video (Outdated)
-
-<div align="center">
-      <a href="https://www.youtube.com/watch?v=QHrcnESh7zc">
-     <img
-      src="https://img.youtube.com/vi/QHrcnESh7zc/0.jpg"
-      alt="Demo Video"
-      style="width:100%;">
-      </a>
-    </div>
-
 
 ## Overview
  Matrix Unity Tool is a multichain Web3 toolkit which helps integrate Web3 to Unity WebGL based games. It provides a easy-to-use set of APIs inside unity for game developers to design their multichain games.
